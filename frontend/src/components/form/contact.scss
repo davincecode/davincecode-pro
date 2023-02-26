@@ -1,0 +1,76 @@
+@use "../../scss/" as *;
+
+.contact-container{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+margin-top: 2rem;
+
+
+& h1 {
+  font-size: $h1-large;
+  line-height: normal;
+
+  @include tablet {
+    font-size: $h1-large;
+  }
+
+  @include mobile {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+  
+  background: #3dd1a5; 
+  background: -webkit-linear-gradient(to right, #3dd1a5, #8129ae);
+  background: linear-gradient(to right, #3dd1a5, #8129ae);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+}
+
+& p {
+    font-size: $p-medium;
+    color: $text-color;
+    margin-bottom: 1rem;
+
+    @include mobile {
+      font-size: $p-large;
+    }
+}
+
+
+
+
+// border: 1px solid green;
+}
+
+form > div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+form > div > label {
+  margin: 0.5rem;
+}
+
+form > div > input,
+form > div > textarea {
+  padding: 0.5rem;
+  min-width: 100%;
+
+
+  @include mobile {
+    padding: 1rem;
+    min-width: 100%;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+

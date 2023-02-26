@@ -1,0 +1,5 @@
+export { default as Hero } from "./hero/Hero"
+export { default as Navbar } from "./navbar/Navbar"
+export { default as Contact } from "./form/Contact"
+export { default as Posts } from "./post/Posts"
+export { default as Socials } from "./socials/Socials"

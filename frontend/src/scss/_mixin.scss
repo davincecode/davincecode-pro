@@ -1,0 +1,32 @@
+@mixin flex($align-item, $justify-content) {
+  display: flex;
+  align-items: $align-item;
+  justify-content: $justify-content;
+}
+
+@mixin overlay {
+  background-color: rgba($color: #000000, $alpha: 0.6);
+}
+
+@mixin h1Color($h1ColorLarge) { 
+  font-size: $h1-large;
+  background: #3dd1a5; 
+  background: -webkit-linear-gradient(to right, #3dd1a5, #8129ae);
+  background: linear-gradient(to right, #3dd1a5, #8129ae);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@mixin h1 {
+    font-family: "Lato", sans-serif;
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 1.00;
+    opacity: 1.00;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    letter-spacing: 0.00px;
+    word-spacing: 0.00px;
+    text-transform: none;
+}

@@ -1,0 +1,167 @@
+@use "../../scss/" as *;
+
+nav {
+  position: sticky;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  height: $header-height;
+  background-color: $header-bg;
+  
+  // border: 1px solid $detail-color;
+  z-index: 999;
+
+  ul {
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
+  @include mobile {
+    height: $header-height-mobile;
+  }
+}
+
+.NavbarItems {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: transparent;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.nav-links:hover {
+  color: $hover-text-color;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.navbar-logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: text-color;
+
+  @include mobile {
+    font-size: 1.5rem;
+  }
+  
+  &:hover {
+    color: $hover-text-color;
+  }
+}
+
+.close-btn {
+  color: #fff;
+  filter: invert(1);
+}
+
+.open-btn {
+  color: #fff;
+  filter: invert(1);
+}
+
+
+// Mobile menu //
+
+@media screen and (max-width: 768px) {
+
+.NavbarItems {
+    position: sticky;
+    align-items: center;
+    height: 100%;
+  }
+
+.nav-menu {
+  // position: relative;
+  display: flex;
+  list-style: none;
+  width: 100vw;
+
+  &__active{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: $header-bg;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-bottom: 1px solid $detail-color;
+  font-size: $p-large;
+  }
+}
+
+ul li:hover {
+  background-color: $hover-bg-color;
+}
+
+.nav-links {
+  text-align: center;
+  width: 100vw;
+  display: flex;
+  padding: 2rem;
+}
+
+.nav-links:hover {
+  color: $text-color;
+}
+
+.menu-icon {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-100%, 60%);
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 2;
+}
+  
+
+}
+
+.login-btn {
+  display: flex;
+  
+  &:hover {
+    color: $hover-text-color;
+  }
+
+  @include mobile {
+  position: absolute;
+  top: 0;
+  right: 10rem;
+  padding: 2rem;
+  display: flex;
+  }
+}
+
+
+.register-btn {
+display: flex;
+
+&:hover {
+  color: $hover-text-color;
+}
+
+@include mobile {
+  display: flex;
+  text-align: center;
+  width: 100vw;
+  padding: 2rem;
+  }
+
+
+}
+
+.nav-out {
+  display: none;
+}
