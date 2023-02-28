@@ -5,7 +5,7 @@ const express = require("express")
 const compression = require("compression")
 const { errorHandler } = require("./middleware/errorMiddleware")
 const connectDB = require("./config/db")
-const PORT = process.env.PORT || 8080
+const PORT = process.env.PORT || 3788
 
 const app = express()
 const mg = require("mailgun-js")

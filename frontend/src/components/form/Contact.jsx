@@ -31,10 +31,11 @@ function Contact() {
       toast.success(data.message)
     } catch (err) {
       setLoading(false)
+      console.log("ERROR", err)
       toast.error(
         err.response && err.response.data.message
           ? err.response.data.message
-          : err.message
+          : err.message,
       )
     }
 
